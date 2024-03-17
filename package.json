@@ -1,0 +1,39 @@
+{
+	"name": "instagram-private-api",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified!\" && exit 1",
+		"dev": "nodemon index.js",
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@phaticusthiccy/open-apis": "^1.8.5",
+		"@sasmeee/igdl": "^1.0.0",
+		"axios": "^1.6.7",
+		"bcryptjs": "^2.4.3",
+		"cheerio": "^1.0.0-rc.12",
+		"cloudinary": "^1.41.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"express-rate-limit": "^7.1.5",
+		"express-session": "^1.17.3",
+		"google-auth-library": "^9.4.2",
+		"google-spreadsheet": "^4.1.1",
+		"googleapis": "^130.0.0",
+		"i-downloader": "^0.0.1",
+		"igdown-scrapper": "^2.0.0",
+		"instagram-private-api": "^1.45.3",
+		"jsonwebtoken": "^9.0.2",
+		"mailgun-js": "^0.22.0",
+		"mongoose": "^8.0.3",
+		"node-cron": "^3.0.3",
+		"social-downloader-cherry": "^1.0.0",
+		"socks-proxy-agent": "^8.0.2"
+	}
+}

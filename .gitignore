@@ -1,0 +1,5 @@
+.env
+newapi.js
+node_modules
+ProtectedData
+.vercel
