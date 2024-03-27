@@ -14,8 +14,6 @@ export const vars = {
 	mongoDbId: String(process.env.MONGODB_ID),
 	mongoDbPass: String(process.env.MONGODB_PASS),
 	rapidApiHost: String(process.env.RAPIDAPI_HOST),
-	requestUrl: String(process.env.REQUEST_URL),
-	extensionId: String(process.env.EXTENSION_ID),
 	secretCode: String(process.env.SECRET_CODE),
 	cloudName: String(process.env.CLOUD_NAME),
 	apiKeyCloudinary: String(
