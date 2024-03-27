@@ -3,10 +3,7 @@ import session from 'express-session';
 import cron from 'node-cron';
 import cors from 'cors';
 import connectDB from './Connections/db.js';
-import {
-	UpdateAllReels,
-	deleteCompletedReels,
-} from './Controllers/Cronjobs/UpdateAllReels.js';
+import { deleteCompletedReels } from './Controllers/Cronjobs/UpdateAllReels.js';
 import { RemoveImages } from './Controllers/Cronjobs/RemoveImages.js';
 import { vars } from './secrets.js';
 
@@ -16,10 +13,7 @@ connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 
-const RequestUrl = [
-	'http://localhost:5173',
-	'https://www.igloaded.com',
-];
+const RequestUrl = ['https://www.igloaded.com'];
 
 app.set('trust proxy', 1);
 app.use(
@@ -55,11 +49,9 @@ app.get('/', (req, res) => {
 	});
 });
 
-app.get('/reels/updateall', UpdateAllReels);
 app.get('/reels/delete', deleteCompletedReels);
 app.get('/images/delete', RemoveImages);
 
-cron.schedule('0 2 * * *', UpdateAllReels);
 cron.schedule('0 3 * * *', deleteCompletedReels);
 cron.schedule('0 4 * * *', RemoveImages);
 

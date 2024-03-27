@@ -3,23 +3,13 @@ const trackReelSchema = new mongoose.Schema(
 	{
 		id: { type: Number, required: true },
 		userEmail: { type: String, required: true },
-		uploadDate: { type: Number, required: true },
-		uploadedBy: { type: String, required: true },
-		endDate: { type: Number, required: true },
-		startDate: { type: Number, required: true },
-		updatedAt: { type: Number, required: true },
-		views: { type: Number, required: true },
-		likes: { type: Number, required: true },
-		plays: { type: Number, required: true },
-		reelUrl: { type: String, required: true },
 		title: { type: String, required: true },
-		shortcode: { type: String, required: true },
 		thumbnail: { type: String, required: true },
-		totalIterations: {
+		dateCreated: {
 			type: Number,
 			required: true,
 		},
-		checkedAt: {
+		totalIterations: {
 			type: Number,
 			required: true,
 		},
@@ -31,7 +21,7 @@ const trackReelSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		spreadsheetUrl: {
+		fileUrl: {
 			type: String,
 			required: true,
 		},
